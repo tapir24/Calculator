@@ -59,6 +59,7 @@ html{
     float: left;
     width: 66px;
     height: 36px;
+    transition: all 0.2s ease;
 }
 .keys span.operator{
     background-color: rgb(91, 218, 32);
@@ -83,4 +84,18 @@ html{
 }
 .keys,.top{
     overflow: hidden    ;
+}
+#clear{
+    background-color: rgb(188, 247, 255);
+    box-shadow: 0px 4px black;
+    color :yellow;
+}
+#clear:hover{
+    background-color: rgb(14, 195, 219);
+    box-shadow: 0px 4px black;
+    color :yellow;
+}
+#clear:active{
+    box-shadow: 0px 0px black;
+    top: 4px;
 }

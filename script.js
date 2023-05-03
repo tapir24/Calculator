@@ -28,7 +28,24 @@ function load(){
                     }
                     pointexist=false;
                     break;
-            }
+                case '+':
+                case '-':
+                case '÷':
+                case 'x':
+                    var lastchar=input[input.length-1];
+                    if(input !='' && !operator.includes(lastchar))
+                        screen.innerHTML+=btnvalue;
+                    else{
+                        if(input == ''&& btnvalue=='-')
+                            screen.innerHTML+=btnvalue;
+                    }
+                    if(operator.includes(lastchar) && input.length>1)
+                        {screen.innerHTML=input.replace(lastchar,btnvalue);}
+                        break;
+                default:
+                    screen.innerHTML+=btnvalue;
+                    break;
+            }   
         });
     }
 }
