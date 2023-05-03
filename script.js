@@ -9,7 +9,7 @@ function load(){
     for(var i=0; i<button.length;i++){
         var pointexist=false;
         button[i].addEventListener('click',function(){
-            btnvalue=this.innerhtml;
+            btnvalue=this.innerHTML;
             input=screen.innerHTML;
             switch(btnvalue){
                 case 'C':
@@ -20,7 +20,7 @@ function load(){
                 case '=':
                     var lastchar=input[input.length-1];
                     input=input.replace("x",'*').replace("÷",'/');
-                    if(operators.includes(lastchar)||lastchar=='.'){
+                    if(operator.includes(lastchar)||lastchar=='.'){
                         break;
                     }  
                     else{
@@ -36,7 +36,7 @@ function load(){
                     if(input !='' && !operator.includes(lastchar))
                         screen.innerHTML+=btnvalue;
                     else{
-                        if(input == ''&& btnvalue=='-')
+                        if(input == '' && btnvalue =='-')
                             screen.innerHTML+=btnvalue;
                     }
                     if(operator.includes(lastchar) && input.length>1)
